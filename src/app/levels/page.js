@@ -8,7 +8,7 @@ import { useEffect, useState } from "react";
 
 
 export default function Level({ children }) {
-	const [level, setLevel] = useState(1);
+	const [level, setLevel] = useState(0);
 
 	useEffect(() => {
 		const levelValue = localStorage.getItem('level') || 0;
@@ -19,8 +19,8 @@ export default function Level({ children }) {
 		<div className="flex justify-center items-center align-middle w-[100vw] h-[100vh] flex-col">
 			{level}
 			<div className="flex justify-center align-middle flex-row w-full h-full ">
-				<div className="flex justify-center items-center h-full cursor-pointer [transform:perspective(800px)_rotateY(10deg)] hover:[transform:perspective(800px)_rotateY(-10deg)] w-full sm:w-84 p-5 rounded-lg shadow-lg group duration-300">
-					<div className="card bg-base-100 image-full left-[-75px]  h-[85%] shadow-xl">
+				<div className="flex justify-center items-center h-full w-full">
+					<div className="cursor-pointer [transform:perspective(800px)_rotateY(10deg)] hover:[transform:perspective(800px)_rotateY(-10deg)] w-full sm:w-84 p-5 group duration-300 card bg-base-100 image-full h-[85%] shadow-xl">
 						<figure>
 							<img
 								src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
